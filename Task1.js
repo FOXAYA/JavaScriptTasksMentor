@@ -1,17 +1,19 @@
+let text  = "This Is My First Task";
+let i = 0;
+let output = document.querySelector("h1");
 
-//creat text, specify speed, catch my div
+function typingWriter(){
+    output.textContent += text.charAt(i);
+    i++;
 
-let my_txt =  "This Is My First Task";
-let speed =  100;
-let output_txt = document.querySelector(".txt_typing")//or document.getElementsByClassName
 
-//function to add text to html page check if txt is < length of my text
-function typing(){
-    let i  = 0;
-    if (i < my_txt.length)
+    if (i === text.length+1)
     {
-        output_txt.innerHTML = "my_txt";
-    }
-}
+        i = 0;
+        output.textContent = " ";
 
+    }
+    setTimeout(typingWriter, 200);
+}
+typingWriter();
 
