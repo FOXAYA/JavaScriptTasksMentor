@@ -22,27 +22,27 @@ typingWriter();*/
 
 // Task Two>>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
 
-let btn_one = document.getElementById("btn-one") ;
-let btn_two =  document.getElementById("btn-two");
-let btn_three = document.getElementById("btn-three") ;
-let text = document.querySelector("h1") ;
-let back_ground = document.querySelector(".bg"); 
-// let container = document.querySelector(".container")
+// let btn_one = document.getElementById("btn-one") ;
+// let btn_two =  document.getElementById("btn-two");
+// let btn_three = document.getElementById("btn-three") ;
+// let text = document.querySelector("h1") ;
+// let back_ground = document.querySelector(".bg"); 
+// // let container = document.querySelector(".container")
 
 
-btn_one.addEventListener('click', () => {
-    text.before(back_ground);
-});
+// btn_one.addEventListener('click', () => {
+//     text.before(back_ground);
+// });
 
 
-btn_three.addEventListener('click', () => {
-   text.after(back_ground);
-});
+// btn_three.addEventListener('click', () => {
+//    text.after(back_ground);
+// });
 
 
-btn_two.addEventListener('click', () => {
-       back_ground.append(text);
-});
+// btn_two.addEventListener('click', () => {
+//        back_ground.append(text);
+// });
 
 
 
@@ -91,6 +91,88 @@ btn_two.addEventListener('click', () => {
  
 //     });
 // });
+
+
+
+// Task FOUR>>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
+
+document.addEventListener("DOMContentLoaded", () => {
+    const container =  document.querySelector('.container');
+    container.style.cssText =`
+    display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px;
+    ` 
+    // Number of rows and cards per row
+    const rowsNum = 4;
+    const cardsNum = 5;
+
+    // Function to create a card
+    function createCard(content) {
+        const card = document.createElement('div');
+   
+            card.style.cssText = `
+                width:400px ;
+                height: 300px;
+                border: 1px solid rgb(255, 242, 0); 
+                `;
+                let img = document.createElement("img");
+                img.setAttribute("src" , "/images/three.jpg");
+            
+                img.style.cssText = `
+                    width: 300px;
+                    border-radius: 5px; 
+                    `
+                //paragraph set, and style
+                let p = document.createElement("p");
+                p.textContent = "we Have Four Cards In Stock.";
+            
+                p.style.cssText = `
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-size: 18px;
+                    color: rgb(8, 5, 1);
+                    text-transform: capitalize;
+                `
+                let h1 = document.createElement("h1");  
+                h1.textContent = "Fox Cards"
+                
+                h1.style.cssText = `
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-size: 18px;
+                    color: orange;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                `
+            
+                 card.append(img,h1 ,p);
+                  return card;
+    }
+  
+
+
+    //Creat Rows
+    function createRow(rowNum) {
+        const row = document.createElement('div');
+        row.className = 'row';
+
+        for (let i = 1; i <= cardsNum; i++) {
+            const card = createCard(`Card ${rowNum}-${i}`);
+            row.appendChild(card);
+        }
+        row.style.cssText =`
+        display: flex;
+          gap: 10px;
+        `
+        return row;
+    }
+
+    // Create rows and append them to the container
+    for (let i = 1; i <= rowsNum; i++) {
+        const row = createRow(i);
+        container.appendChild(row);
+    }
+});
 
 
 
