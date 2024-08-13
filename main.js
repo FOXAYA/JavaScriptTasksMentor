@@ -99,7 +99,7 @@ typingWriter();*/
 document.addEventListener("DOMContentLoaded", () => {
     const container =  document.querySelector('.container');
     container.style.cssText =`
-    display: flex;
+               display: flex;
                 flex-direction: column;
                 gap: 10px;
                 padding: 20px;
@@ -109,20 +109,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const cardsNum = 5;
 
     // Function to create a card
-    function createCard(content) {
+    function createCard() {
         const card = document.createElement('div');
    
             card.style.cssText = `
                 width:400px ;
                 height: 300px;
-                border: 1px solid rgb(255, 242, 0); 
+                border: 3px solid brown; 
                 `;
+
                 let img = document.createElement("img");
                 img.setAttribute("src" , "/images/three.jpg");
             
                 img.style.cssText = `
                     width: 300px;
-                    border-radius: 5px; 
                     `
                 //paragraph set, and style
                 let p = document.createElement("p");
@@ -149,21 +149,18 @@ document.addEventListener("DOMContentLoaded", () => {
                   return card;
     }
   
-
-
     //Creat Rows
     function createRow(rowNum) {
         const row = document.createElement('div');
-        row.className = 'row';
 
         for (let i = 1; i <= cardsNum; i++) {
             const card = createCard(`Card ${rowNum}-${i}`);
             row.appendChild(card);
         }
-        row.style.cssText =`
-        display: flex;
-          gap: 10px;
-        `
+            row.style.cssText =`
+            display: flex;
+            gap: 10px;
+                        `
         return row;
     }
 
