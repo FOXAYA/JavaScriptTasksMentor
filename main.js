@@ -183,10 +183,20 @@ const getRandomColor = () => {
     return `rgb(${randomNum()}, ${randomNum()}, ${randomNum()})`;
 };
 //Function To Change Text color;
+
+let counter = 0;
 const changeTextColor = () => {
     const text = document.querySelector("p");
     const randomColor = getRandomColor();
-    text.style.color = randomColor;
+
+    if (counter <= 5){
+      text.style.color = randomColor;
+      counter++;
+    }
+    else{
+        text.style.color = "black";
+
+      }
 };
 //Function To Change body color;
 
@@ -196,4 +206,3 @@ const changeBodyColor = () => {
 //Add event Listene To btns
 text_btn.addEventListener("click", changeTextColor);
 body_btn.addEventListener("click", changeBodyColor);
-window.addEventListener("load", changeColor);
