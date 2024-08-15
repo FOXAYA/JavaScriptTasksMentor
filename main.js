@@ -173,7 +173,7 @@ typingWriter();*/
 
 
 // Task Five>>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
-
+/*
 const body_btn = document.getElementById("body_btn");
 const text_btn = document.getElementById("text_btn");
 
@@ -206,3 +206,20 @@ const changeBodyColor = () => {
 //Add event Listene To btns
 text_btn.addEventListener("click", changeTextColor);
 body_btn.addEventListener("click", changeBodyColor);
+*/
+
+
+// Task six>>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
+
+
+const videoSource = [
+    "/images/VID-20240721-WA0023 (1).mp4",
+    "/images/VID-20240722-WA0052.mp4"
+  ];
+
+  document.addEventListener("DOMContentLoaded", function(){
+     const video =  document.getElementById("videoPlayer");
+     const randomVideo = Math.floor(Math.random() * videoSource.length);
+     video.src = videoSource[randomVideo];
+     video.play();
+  });
