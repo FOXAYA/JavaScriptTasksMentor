@@ -211,7 +211,7 @@ body_btn.addEventListener("click", changeBodyColor);
 
 // Task six>>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
 
-
+/*
 const videoSource = [
     "/images/VID-20240721-WA0023 (1).mp4",
     "/images/VID-20240722-WA0052.mp4"
@@ -223,3 +223,20 @@ const videoSource = [
      video.src = videoSource[randomVideo];
      video.play();
   });
+  */
+
+
+  // Task seven>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
+let closeNav = document.querySelector(".close-btn");
+let sideNav = document.querySelector(".sid-nav");
+let openNav = document.querySelector(".open-nav");
+
+
+
+openNav.addEventListener("click",() => {
+    sideNav.style.width = "250px";
+
+});
+closeNav.addEventListener("click",() => {
+    sideNav.style.width = "0px";
+});
