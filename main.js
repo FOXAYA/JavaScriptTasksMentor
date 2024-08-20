@@ -227,16 +227,46 @@ const videoSource = [
 
 
   // Task seven>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
-let closeNav = document.querySelector(".close-btn");
-let sideNav = document.querySelector(".sid-nav");
-let openNav = document.querySelector(".open-nav");
+// let closeNav = document.querySelector(".close-btn");
+// let sideNav = document.querySelector(".sid-nav");
+// let openNav = document.querySelector(".open-nav");
 
 
 
-openNav.addEventListener("click",() => {
-    sideNav.style.width = "250px";
+// openNav.addEventListener("click",() => {
+//     sideNav.style.width = "250px";
 
-});
-closeNav.addEventListener("click",() => {
-    sideNav.style.width = "0px";
-});
+// });
+// closeNav.addEventListener("click",() => {
+//     sideNav.style.width = "0px";
+// });
+
+
+  // Task eight>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
+
+  (function() {
+    var dragged, listener;
+
+    dragged = null;
+
+    listener = document.addEventListener;
+
+    listener("dragstart", (event) => {
+      return dragged = event.target;
+    });
+
+  
+
+    listener("dragover", function(event) {
+      return event.preventDefault();
+    });
+
+    listener("drop", (event) => {
+      event.preventDefault();
+      if (event.target.className === "drop-zone") {
+        dragged.parentNode.removeChild(dragged);
+        return event.target.appendChild(dragged);
+      }
+    });
+
+  }).call(this);
