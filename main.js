@@ -1,8 +1,8 @@
 // Task One>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
 
-/*const text  = "This Is My First Task";
-const i = 0;
-const output = document.querySelector("h1");
+/*let text  = "This Is My First Task";
+let i = 0;
+let output = document.querySelector("h1");
 
 function typingWriter(){
     output.textContent += text.charAt(i);
@@ -22,12 +22,12 @@ typingWriter();*/
 
 // Task Two>>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
 
-// const btn_one = document.getElementById("btn-one") ;
-// const btn_two =  document.getElementById("btn-two");
-// const btn_three = document.getElementById("btn-three") ;
-// const text = document.querySelector("h1") ;
-// const back_ground = document.querySelector(".bg"); 
-// // const container = document.querySelector(".container")
+// let btn_one = document.getElementById("btn-one") ;
+// let btn_two =  document.getElementById("btn-two");
+// let btn_three = document.getElementById("btn-three") ;
+// let text = document.querySelector("h1") ;
+// let back_ground = document.querySelector(".bg"); 
+// // let container = document.querySelector(".container")
 
 
 // btn_one.addEventListener('click', () => {
@@ -48,8 +48,8 @@ typingWriter();*/
 
 // Task Three>>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
 
-// const list = document.querySelectorAll("ul li");
-// const exp = document.querySelector(".experiment");
+// let list = document.querySelectorAll("ul li");
+// let exp = document.querySelector(".experiment");
 
 // // Check if backgroundImage is set in localStorage
 // if (window.localStorage.getItem("backgroundImage")) {
@@ -81,7 +81,7 @@ typingWriter();*/
 //         e.currentTarget.classList.add("active");
 
 //         // Get the background image URL and set it in localStorage
-//         const backgroundImage = e.currentTarget.dataset.back;
+//         let backgroundImage = e.currentTarget.dataset.back;
 //         window.localStorage.setItem("backgroundImage", backgroundImage);
 
 //         // Change the background image of the experiment div
@@ -97,7 +97,7 @@ typingWriter();*/
 // Task FOUR>>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
 
 // document.addEventListener("DOMContentLoaded", () => {
-//     const container =  document.querySelector('.container');
+//     let container =  document.querySelector('.container');
 //     container.style.cssText =`
 //                display: flex;
 //                 flex-direction: column;
@@ -105,12 +105,12 @@ typingWriter();*/
 //                 padding: 20px;
 //     ` 
 //     // Number of rows and cards per row
-//     const rowsNum = 4;
-//     const cardsNum = 5;
+//     let rowsNum = 4;
+//     let cardsNum = 5;
 
 //     // Function to create a card
 //     function createCard() {
-//         const card = document.createElement('div');
+//         let card = document.createElement('div');
    
 //             card.style.cssText = `
 //                 width:400px ;
@@ -118,14 +118,14 @@ typingWriter();*/
 //                 border: 3px solid brown; 
 //                 `;
 
-//                 const img = document.createElement("img");
+//                 let img = document.createElement("img");
 //                 img.setAttribute("src" , "/images/three.jpg");
             
 //                 img.style.cssText = `
 //                     width: 300px;
 //                     `
 //                 //paragraph set, and style
-//                 const p = document.createElement("p");
+//                 let p = document.createElement("p");
 //                 p.textContent = "we Have Four Cards In Stock.";
             
 //                 p.style.cssText = `
@@ -134,7 +134,7 @@ typingWriter();*/
 //                     color: rgb(8, 5, 1);
 //                     text-transform: capitalize;
 //                 `
-//                 const h1 = document.createElement("h1");  
+//                 let h1 = document.createElement("h1");  
 //                 h1.textContent = "Fox Cards"
                 
 //                 h1.style.cssText = `
@@ -151,10 +151,10 @@ typingWriter();*/
   
 //     //Creat Rows
 //     function createRow(rowNum) {
-//         const row = document.createElement('div');
+//         let row = document.createElement('div');
 
-//         for (const i = 1; i <= cardsNum; i++) {
-//             const card = createCard(`Card ${rowNum}-${i}`);
+//         for (let i = 1; i <= cardsNum; i++) {
+//             let card = createCard(`Card ${rowNum}-${i}`);
 //             row.appendChild(card);
 //         }
 //             row.style.cssText =`
@@ -165,8 +165,8 @@ typingWriter();*/
 //     }
 
 //     // Create rows and append them to the container
-//     for (const i = 1; i <= rowsNum; i++) {
-//         const row = createRow(i);
+//     for (let i = 1; i <= rowsNum; i++) {
+//         let row = createRow(i);
 //         container.appendChild(row);
 //     }
 // });
@@ -174,20 +174,20 @@ typingWriter();*/
 
 // Task Five>>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
 /*
-const body_btn = document.getElementById("body_btn");
-const text_btn = document.getElementById("text_btn");
+let body_btn = document.getElementById("body_btn");
+let text_btn = document.getElementById("text_btn");
 
 //Function Of Random colors
-const getRandomColor = () => {
-    const randomNum = () => Math.floor(Math.random() * 255);
+let getRandomColor = () => {
+    let randomNum = () => Math.floor(Math.random() * 255);
     return `rgb(${randomNum()}, ${randomNum()}, ${randomNum()})`;
 };
 //Function To Change Text color;
 
 let counter = 0;
-const changeTextColor = () => {
-    const text = document.querySelector("p");
-    const randomColor = getRandomColor();
+let changeTextColor = () => {
+    let text = document.querySelector("p");
+    let randomColor = getRandomColor();
 
     if (counter <= 5){
       text.style.color = randomColor;
@@ -200,7 +200,7 @@ const changeTextColor = () => {
 };
 //Function To Change body color;
 
-const changeBodyColor = () => {
+let changeBodyColor = () => {
     document.body.style.backgroundColor = getRandomColor();
 };
 //Add event Listene To btns
@@ -212,14 +212,14 @@ body_btn.addEventListener("click", changeBodyColor);
 // Task six>>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
 
 /*
-const videoSource = [
+let videoSource = [
     "/images/VID-20240721-WA0023 (1).mp4",
     "/images/VID-20240722-WA0052.mp4"
   ];
 
   document.addEventListener("DOMContentLoaded", function(){
-     const video =  document.getElementById("videoPlayer");
-     const randomVideo = Math.floor(Math.random() * videoSource.length);
+     let video =  document.getElementById("videoPlayer");
+     let randomVideo = Math.floor(Math.random() * videoSource.length);
      video.src = videoSource[randomVideo];
      video.play();
   });
@@ -243,7 +243,7 @@ const videoSource = [
 
 
   // Task eight>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
-
+/*
   (function() {
     var dragged, listener;
 
@@ -269,4 +269,75 @@ const videoSource = [
       }
     });
 
-  }).call(this);
+  }).call(this);*/
+
+  
+    // Task nine>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
+let container = document.querySelector(".container");
+let form = document.querySelector("form");
+
+
+
+
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+
+    //Handle Form submition
+    let card_container = document.querySelector(".card_container");
+    let product_name = document.getElementById('product_name').value;
+    let product_desc = document.getElementById('description').value;
+    let product_img = document.getElementById('url').value;
+    let product_price = document.getElementById('price').value;
+    let product_discount = document.getElementById('discount').value;
+  
+
+    //creat card elements
+    let card =  document.createElement("div");
+    card.className = 'card';
+
+    let card_img = document.createElement('img');
+    card_img.className = 'img';
+    card_img.src = product_img;
+    card_img.alt = product_name;
+
+    let card_title = document.createElement('h1');
+    card_title.textContent =  product_name;
+
+
+    let card_desc = document.createElement('p');
+    card_desc.textContent =  product_desc;
+
+    
+    let card_price= document.createElement('p');
+    card_price.textContent =  `$${parseFloat(product_price).toFixed(2)}`;
+
+
+    let card_discount= document.createElement('p');
+    card_discount.textContent =  `$${parseFloat(product_discount).toFixed(2)}`;
+
+    let edit_btn = document.createElement("button");
+    edit_btn.className = "btn";
+     edit_btn.textContent = 'Edit';
+
+    let delete_btn = document.createElement("button");
+    delete_btn.textContent = 'Delete';
+    delete_btn.className = "btn";
+
+
+
+       // Append elements to card
+   
+    card_container.appendChild(card);
+  
+       card.appendChild(card_img);
+       card.appendChild(card_title);
+       card.appendChild(card_desc);
+       card.appendChild(card_price);
+       card.appendChild(card_discount);
+       card.appendChild(edit_btn);
+       card.appendChild(delete_btn);
+});
+
+delete_btn.addEventListener("Click",() => {
+  card_container.removeChild();
+});
